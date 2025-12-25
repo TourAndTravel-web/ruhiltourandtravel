@@ -13,7 +13,7 @@ body{
 }
 
 header{
-    background:linear-gradient(to right,#0b5ed7,#084298);
+    background:linear-gradient(135deg,#0b5ed7,#084298);
     color:white;
     padding:35px 15px;
     text-align:center;
@@ -21,18 +21,23 @@ header{
 
 header h1{
     margin:0;
-    font-size:30px;
+    font-size:32px;
+}
+
+header p{
+    margin-top:8px;
+    font-size:16px;
 }
 
 nav{
-    background:#222;
+    background:#111;
+    padding:14px;
     text-align:center;
-    padding:12px;
 }
 
 nav a{
     color:white;
-    margin:10px;
+    margin:0 12px;
     text-decoration:none;
     font-weight:bold;
 }
@@ -40,46 +45,60 @@ nav a{
 section{
     background:white;
     margin:20px;
-    padding:20px;
+    padding:25px;
     border-radius:12px;
 }
 
 h2{
     color:#0b5ed7;
-    text-align:center;
 }
 
 .gallery{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap:15px;
-    margin-top:20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap:20px;
+    margin-top:25px;
 }
 
 .gallery img{
     width:100%;
-    height:220px;
+    height:300px;
     object-fit:cover;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
 }
 
 .btn{
     display:inline-block;
     background:#0b5ed7;
     color:white;
-    padding:12px 22px;
+    padding:14px 22px;
     text-decoration:none;
-    border-radius:6px;
+    border-radius:8px;
     margin-top:15px;
+    font-weight:bold;
+}
+
+.btn.whatsapp{
+    background:#25D366;
+}
+
+.btn.call{
+    background:#198754;
 }
 
 footer{
-    background:#222;
+    background:#111;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:18px;
     margin-top:30px;
+    font-size:14px;
 }
 </style>
 </head>
@@ -88,7 +107,7 @@ footer{
 
 <header>
 <h1>Ruhil Tour And Travel</h1>
-<p>Your Trusted Travel Partner</p>
+<p>Your Trusted Tempo Traveller & Tour Service</p>
 </header>
 
 <nav>
@@ -99,11 +118,33 @@ footer{
 </nav>
 
 <section>
-<h2>Our Premium Tempo Traveller</h2>
-<p style="text-align:center;">
-Comfortable, luxury and well-maintained Tempo Traveller for family tours, corporate trips and all India travel.
+<h2>About Us</h2>
+<p>
+<b>Ruhil Tour And Travel</b> ek professional aur reliable travel service company hai jo
+customers ko safe, comfortable aur tension-free journey provide karti hai.
 </p>
 
+<p>
+Hum <b>Tempo Traveller rental services</b> provide karte hain family tours, corporate trips,
+wedding travel, pilgrimage yatra aur all-India tourism ke liye.
+</p>
+
+<ul>
+<li>✔ Clean & well-maintained vehicles</li>
+<li>✔ Experienced & polite drivers</li>
+<li>✔ Affordable & transparent pricing</li>
+<li>✔ On-time pickup & drop</li>
+<li>✔ 24×7 customer support</li>
+</ul>
+
+<p>
+Agar aap ek trusted travel partner dhundh rahe hain jo aapki journey ko comfortable aur
+memorable banaye — <b>Ruhil Tour And Travel</b> aapke liye best choice hai.
+</p>
+</section>
+
+<section>
+<h2>Our Premium Fleet</h2>
 <div class="gallery">
 <img src="images/bus1.jpg">
 <img src="images/bus2.jpg">
@@ -112,16 +153,13 @@ Comfortable, luxury and well-maintained Tempo Traveller for family tours, corpor
 </section>
 
 <section>
-<h2>Contact Us</h2>
-<p style="text-align:center;">
-📞 <b>+91 98960 67930</b><br><br>
-📍 Gurugram & Jind, Haryana
-</p>
+<h2>Contact & Booking</h2>
 
-<div style="text-align:center;">
-<a class="btn" href="tel:+919896067930">Call Now</a>
-<a class="btn" href="https://wa.me/919896067930">WhatsApp</a>
-</div>
+<p><b>📍 Office Location:</b> Gurugram & Jind, Haryana</p>
+<p><b>📞 Call:</b> +91 98960 67930</p>
+
+<a class="btn call" href="tel:+919896067930">📞 Call Now</a>
+<a class="btn whatsapp" href="https://wa.me/919896067930">💬 WhatsApp</a>
 </section>
 
 <footer>
