@@ -12,13 +12,39 @@ body{
   background:#f4f6f9;
 }
 
+/* ===== BANNER HEADER ===== */
 header{
-  background:#0b5ed7;
+  position:relative;
+  background:url("images/banner.jpg") center/cover no-repeat;
   color:white;
   text-align:center;
-  padding:25px 15px;
+  padding:90px 15px;
 }
 
+header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+}
+
+header h1,
+header p{
+  position:relative;
+  z-index:2;
+}
+
+header h1{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+header p{
+  font-size:18px;
+  opacity:0.95;
+}
+
+/* ===== NAV ===== */
 nav{
   background:#222;
   text-align:center;
@@ -32,6 +58,7 @@ nav a{
   font-weight:bold;
 }
 
+/* ===== SECTIONS ===== */
 section{
   background:white;
   margin:20px;
@@ -43,6 +70,7 @@ h2{
   color:#0b5ed7;
 }
 
+/* ===== ABOUT IMAGE ===== */
 .about-img{
   width:100%;
   max-width:900px;
@@ -52,6 +80,7 @@ h2{
   box-shadow:0 12px 30px rgba(0,0,0,0.3);
 }
 
+/* ===== GALLERY ===== */
 .gallery{
   display:flex;
   flex-wrap:wrap;
@@ -66,6 +95,7 @@ h2{
   box-shadow:0 10px 20px rgba(0,0,0,0.25);
 }
 
+/* ===== BUTTONS ===== */
 .btn{
   display:inline-block;
   background:#0b5ed7;
@@ -77,6 +107,7 @@ h2{
   font-weight:bold;
 }
 
+/* ===== FLOAT BUTTONS ===== */
 .float-btn{
   position:fixed;
   right:15px;
@@ -100,6 +131,7 @@ h2{
   background:#0b5ed7;
 }
 
+/* ===== FOOTER ===== */
 footer{
   background:#222;
   color:white;
@@ -112,11 +144,13 @@ footer{
 
 <body>
 
+<!-- ===== HEADER BANNER ===== -->
 <header>
   <h1>Ruhil Tour And Travel</h1>
   <p>Your Trusted Travel Partner</p>
 </header>
 
+<!-- ===== NAV ===== -->
 <nav>
   <a href="#">Home</a>
   <a href="#">About</a>
@@ -125,15 +159,14 @@ footer{
   <a href="#">Contact</a>
 </nav>
 
+<!-- ===== ABOUT ===== -->
 <section>
   <h2>About Us</h2>
-
-  <!-- 🔥 UPDATED PROFESSIONAL & PYARA TEXT -->
   <p>
     Ruhil Tour And Travel ek trusted aur customer-focused travel service company hai,
     jo aapke har safar ko safe, comfortable aur tension-free banane ke liye kaam karti hai.
-    Hum well-maintained vehicles, experienced drivers aur punctual service par poora
-    focus rakhte hain, taaki aap apne travel ka har pal enjoy kar sako.
+    Hum well-maintained vehicles, experienced drivers aur punctual service par poora focus rakhte hain,
+    taaki aap apne travel ka har pal enjoy kar sako.
     <br><br>
     Chahe family vacation ho, group tour, wedding travel ya corporate journey,
     Ruhil Tour And Travel aapke liye reliable aur affordable travel solutions provide karta hai.
@@ -144,6 +177,7 @@ footer{
   <img src="images/about.jpg" class="about-img">
 </section>
 
+<!-- ===== VEHICLES ===== -->
 <section>
   <h2>Our Vehicles</h2>
   <div class="gallery">
@@ -153,6 +187,7 @@ footer{
   </div>
 </section>
 
+<!-- ===== CONTACT ===== -->
 <section>
   <h2>Contact Us</h2>
   <p><strong>📞 Phone:</strong> +91 98960 67930</p>
