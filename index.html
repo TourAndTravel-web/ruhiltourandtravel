@@ -12,22 +12,19 @@ body{
   background:#f4f6f9;
 }
 
-/* ===== BANNER ===== */
-.banner{
-  position:relative;
-}
-.banner img{
-  width:100%;
-  height:auto;
-  display:block;
+header{
+  background:#0b5ed7;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
 }
 
-/* ===== NAV ===== */
 nav{
   background:#222;
   text-align:center;
   padding:12px;
 }
+
 nav a{
   color:white;
   margin:10px;
@@ -35,7 +32,6 @@ nav a{
   font-weight:bold;
 }
 
-/* ===== SECTIONS ===== */
 section{
   background:white;
   margin:20px;
@@ -56,12 +52,12 @@ h2{
   box-shadow:0 12px 30px rgba(0,0,0,0.3);
 }
 
-/* ===== GALLERY ===== */
 .gallery{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
 }
+
 .gallery img{
   width:100%;
   max-width:320px;
@@ -70,7 +66,6 @@ h2{
   box-shadow:0 10px 20px rgba(0,0,0,0.25);
 }
 
-/* ===== BUTTONS ===== */
 .btn{
   display:inline-block;
   background:#0b5ed7;
@@ -82,7 +77,6 @@ h2{
   font-weight:bold;
 }
 
-/* ===== FLOAT BUTTONS ===== */
 .float-btn{
   position:fixed;
   right:15px;
@@ -91,6 +85,7 @@ h2{
   flex-direction:column;
   gap:12px;
 }
+
 .float-btn a{
   background:#25D366;
   color:white;
@@ -100,11 +95,11 @@ h2{
   text-align:center;
   text-decoration:none;
 }
+
 .call{
   background:#0b5ed7;
 }
 
-/* ===== FOOTER ===== */
 footer{
   background:#222;
   color:white;
@@ -117,9 +112,9 @@ footer{
 
 <body>
 
-<!-- ===== BANNER IMAGE ONLY (NO EXTRA TEXT) ===== -->
-<header class="banner">
-  <img src="images/banner.jpg" alt="Ruhil Tour And Travel">
+<header>
+  <h1>Ruhil Tour And Travel</h1>
+  <p>Your Trusted Travel Partner</p>
 </header>
 
 <nav>
@@ -132,11 +127,18 @@ footer{
 
 <section>
   <h2>About Us</h2>
+
+  <!-- 🔥 UPDATED PROFESSIONAL & PYARA TEXT -->
   <p>
-    Ruhil Tour And Travel ek professional aur trusted travel service company hai.
-    Hum customers ko safe, comfortable aur affordable travel solutions provide karte hain.
-    Hamari priority customer satisfaction, punctual service aur well-maintained vehicles hain.
-    Aap family tour, group tour, wedding travel ya corporate travel ke liye hume choose kar sakte ho.
+    Ruhil Tour And Travel ek trusted aur customer-focused travel service company hai,
+    jo aapke har safar ko safe, comfortable aur tension-free banane ke liye kaam karti hai.
+    Hum well-maintained vehicles, experienced drivers aur punctual service par poora
+    focus rakhte hain, taaki aap apne travel ka har pal enjoy kar sako.
+    <br><br>
+    Chahe family vacation ho, group tour, wedding travel ya corporate journey,
+    Ruhil Tour And Travel aapke liye reliable aur affordable travel solutions provide karta hai.
+    Hamari sabse badi pehchan hai customer satisfaction, honesty aur long-term trust.
+    Ek baar safar karein, aur hamesha ke liye hume apna travel partner bana lein.
   </p>
 
   <img src="images/about.jpg" class="about-img">
