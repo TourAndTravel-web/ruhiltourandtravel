@@ -6,179 +6,208 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f4f6f9;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
 }
 
-/* ===== BANNER ===== */
-header{
-  background:url("images/banner.jpg") center/cover no-repeat;
-  height:260px;
+/* HERO BANNER */
+header {
+  background: url("images/banner.jpg") center/cover no-repeat;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+header::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+}
+header h1, header p {
+  position: relative;
+  z-index: 1;
+}
+header h1 { font-size: 38px; margin: 0; }
+header p { font-size: 18px; margin-top: 8px; }
+
+/* NAV */
+nav {
+  background: #222;
+  text-align: center;
+  padding: 12px;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* ===== NAVBAR ===== */
-nav{
-  background:#222;
-  text-align:center;
-  padding:12px;
+/* SECTION TITLES */
+section h2 {
+  color: #0b5ed7;
+  margin-bottom: 12px;
+  text-align: center;
 }
 
-nav a{
-  color:white;
-  margin:10px;
-  text-decoration:none;
-  font-weight:bold;
+/* ABOUT -->
+ */
+.about-img {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
 
-/* ===== SECTIONS ===== */
-section{
-  background:white;
-  margin:20px;
-  padding:25px;
-  border-radius:15px;
+/* PACKAGES */
+.packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 18px;
+  padding: 15px;
+}
+.package-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+.package-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.package-info {
+  padding: 15px;
+}
+.package-info h3 { margin: 0 0 8px; }
+.package-info p { font-size: 14px; margin: 4px 0; }
+.package-info .btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #0b5ed7;
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
-h2{
-  color:#0b5ed7;
-}
-
-/* ABOUT IMAGE */
-.about-img{
-  width:100%;
-  max-width:900px;
-  display:block;
-  margin:25px auto;
-  border-radius:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.3);
-}
-
-/* GALLERY */
-.gallery{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-
-.gallery img{
-  width:100%;
-  max-width:320px;
-  margin:10px;
-  border-radius:15px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.25);
-}
-
-/* BUTTONS */
-.btn{
-  display:inline-block;
-  background:#0b5ed7;
-  color:white;
-  padding:14px 22px;
-  border-radius:8px;
-  text-decoration:none;
-  margin:10px 5px;
-  font-weight:bold;
-}
-
-/* FLOAT BUTTONS */
-.float-btn{
-  position:fixed;
-  right:15px;
-  bottom:15px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.float-btn a{
-  background:#25D366;
-  color:white;
-  padding:14px;
-  border-radius:50%;
-  font-size:20px;
-  text-align:center;
-  text-decoration:none;
-}
-
-.call{
-  background:#0b5ed7;
+/* CONTACT */
+.btn {
+  display: inline-block;
+  background: #0b5ed7;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 8px 5px;
+  font-weight: bold;
 }
 
 /* FOOTER */
-footer{
-  background:#222;
-  color:white;
-  text-align:center;
-  padding:15px;
-  margin-top:30px;
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 25px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== BANNER IMAGE ONLY ===== -->
-<header></header>
+<!-- HERO SECTION -->
+<header>
+  <div>
+    <h1>Ruhil Tour And Travel</h1>
+    <p>Your Trusted Travel Partner for Holiday & Outstation Trips</p>
+  </div>
+</header>
 
-<!-- ===== NAV ===== -->
+<!-- NAV -->
 <nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Gallery</a>
-  <a href="#">Contact</a>
+  <a href="#about">About</a>
+  <a href="#packages">Packages</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<!-- ===== ABOUT ===== -->
-<section>
+<!-- ABOUT -->
+<section id="about">
   <h2>About Us</h2>
-  <p>
-    Ruhil Tour And Travel ek trusted aur customer-friendly travel service company hai,
-    jo aapke har safar ko safe, comfortable aur tension-free banane par focus karti hai.
-    Well-maintained vehicles, experienced drivers aur time-to-time service
-    hamari pehchaan hai.
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    Ruhil Tour And Travel provides comfortable, safe and unforgettable travel experiences.
+    Humari priority hai aapki trip ko smooth & memorable banana, chaahe woh family tour ho,
+    hill station visit ho ya long outstation holiday.
   </p>
-
-  <p>
-    Chahe family trip ho, group tour ya special occasion,
-    hum har journey ko yaadgaar banane ki puri koshish karte hain.
-  </p>
-
   <img src="images/about.jpg" class="about-img">
 </section>
 
-<!-- ===== GALLERY ===== -->
-<section>
-  <h2>Our Vehicles</h2>
-  <div class="gallery">
-    <img src="images/bus1.jpg">
-    <img src="images/bus2.jpg">
-    <img src="images/bus3.jpg">
+<!-- PACKAGES -->
+<section id="packages">
+  <h2>Tour & Holiday Packages</h2>
+  <div class="packages">
+
+    <!-- Example Package 1 -->
+    <div class="package-card">
+      <img src="images/bus1.jpg">
+      <div class="package-info">
+        <h3>Himachal Hill Tour</h3>
+        <p>3 Nights / 4 Days – Shimla & Manali Explore</p>
+        <p>Includes Vehicle + Driver</p>
+        <a class="btn" href="https://wa.me/919896067930">Enquire Now</a>
+      </div>
+    </div>
+
+    <!-- Example Package 2 -->
+    <div class="package-card">
+      <img src="images/bus2.jpg">
+      <div class="package-info">
+        <h3>Religious Tour Package</h3>
+        <p>Haridwar • Rishikesh • Devprayag</p>
+        <p>Family & Group Friendly</p>
+        <a class="btn" href="https://wa.me/919896067930">Enquire Now</a>
+      </div>
+    </div>
+
+    <!-- Example Package 3 -->
+    <div class="package-card">
+      <img src="images/bus3.jpg">
+      <div class="package-info">
+        <h3>All India Outstation</h3>
+        <p>Custom Holiday Routes</p>
+        <p>Pickup from Gurugram / Jind</p>
+        <a class="btn" href="https://wa.me/919896067930">Enquire Now</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section>
-  <h2>Contact Us</h2>
-  <p><strong>📞 Phone:</strong> +91 98960 67930</p>
-  <p><strong>📍 Office:</strong> Gurugram & Jind, Haryana</p>
-
-  <a class="btn" href="https://wa.me/919896067930" target="_blank">WhatsApp Now</a>
-  <a class="btn" href="tel:+919896067930">Call Now</a>
-  <a class="btn" href="https://www.instagram.com/ruhil.tripholiday1" target="_blank">Instagram</a>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact & Booking</h2>
+  <p style="text-align:center;">
+    For custom holiday plans, route & pricing, contact us anytime!
+  </p>
+  <div style="text-align:center;">
+    <a class="btn" href="https://wa.me/919896067930">💬 WhatsApp</a>
+    <a class="btn" href="tel:+919896067930">📞 Call Now</a>
+  </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
   © 2025 Ruhil Tour And Travel | All Rights Reserved
 </footer>
-
-<!-- FLOAT BUTTONS -->
-<div class="float-btn">
-  <a href="https://wa.me/919896067930" target="_blank">💬</a>
-  <a href="tel:+919896067930" class="call">📞</a>
-</div>
 
 </body>
 </html>
