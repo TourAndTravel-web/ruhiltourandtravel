@@ -12,13 +12,34 @@ body{
   background:#f4f6f9;
 }
 
-/* ===== HERO BANNER (IMAGE ONLY – NO TEXT) ===== */
+/* HERO */
 .hero{
   background:url("images/banner.jpg") center/cover no-repeat;
-  height:320px;
+  height:65vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+.hero-content{
+  position:relative;
+  color:#fff;
+}
+.hero-content h1{
+  font-size:36px;
+}
+.hero-content p{
+  font-size:18px;
 }
 
-/* ===== NAV ===== */
+/* NAV */
 nav{
   background:#222;
   text-align:center;
@@ -31,7 +52,7 @@ nav a{
   font-weight:bold;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTION */
 section{
   background:white;
   margin:20px;
@@ -42,30 +63,30 @@ h2{
   color:#0b5ed7;
 }
 
-/* ===== ABOUT IMAGE ===== */
+/* ABOUT IMAGE */
 .about-img{
   width:100%;
   max-width:900px;
   display:block;
-  margin:25px auto;
-  border-radius:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.3);
+  margin:20px auto;
+  border-radius:15px;
+  box-shadow:0 12px 25px rgba(0,0,0,0.3);
 }
 
-/* ===== PACKAGE CARDS ===== */
+/* PACKAGES */
 .packages{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:20px;
 }
 .card{
   width:100%;
   max-width:320px;
-  background:#fff;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  margin:15px;
+  background:white;
+  border-radius:15px;
   overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
   text-align:center;
 }
 .card img{
@@ -79,18 +100,44 @@ h2{
 .card p{
   color:#666;
 }
-.card a{
+.btn{
   display:inline-block;
-  margin:15px;
   background:#0b5ed7;
   color:white;
   padding:12px 20px;
   border-radius:8px;
   text-decoration:none;
+  margin:15px 0 20px;
   font-weight:bold;
 }
 
-/* ===== FLOATING BUTTONS ===== */
+/* FORM */
+form input, form select, form textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+form button{
+  width:100%;
+  background:#0b5ed7;
+  color:white;
+  padding:14px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+}
+
+/* REVIEWS */
+.review{
+  background:#f1f5ff;
+  padding:15px;
+  border-radius:10px;
+  margin:10px 0;
+}
+
+/* FLOAT */
 .float-btn{
   position:fixed;
   right:15px;
@@ -98,7 +145,6 @@ h2{
   display:flex;
   flex-direction:column;
   gap:12px;
-  z-index:999;
 }
 .float-btn a{
   background:#25D366;
@@ -109,11 +155,9 @@ h2{
   text-align:center;
   text-decoration:none;
 }
-.call{
-  background:#0b5ed7;
-}
+.call{ background:#0b5ed7; }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   background:#222;
   color:white;
@@ -126,8 +170,13 @@ footer{
 
 <body>
 
-<!-- HERO IMAGE -->
-<div class="hero"></div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Ruhil Tour And Travel</h1>
+    <p>Your Trusted Travel Partner</p>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -142,78 +191,85 @@ footer{
   <h2>About Us</h2>
   <p>
     Ruhil Tour And Travel ek trusted aur customer-friendly travel service hai.
-    Hum safe, comfortable aur affordable journeys par focus karte hain,
+    Hum safe, comfortable aur affordable journeys provide karte hain,
     taaki aap har safar bina tension enjoy kar sako.
   </p>
-  <p>
-    Chahe family trip ho, group tour ya special yatra,
-    hum har journey ko yaadgaar banane ki koshish karte hain.
-  </p>
-
   <img src="images/about.jpg" class="about-img">
 </section>
 
 <!-- PACKAGES -->
 <section id="packages">
   <h2>Popular Tour Packages</h2>
-
   <div class="packages">
 
     <div class="card">
       <img src="images/manali.jpg">
       <h3>Manali Tour</h3>
-      <p>Mountains • Nature</p>
-      <a href="https://wa.me/919999010920?text=Manali%20tour%20enquiry" target="_blank">
-        Enquiry on WhatsApp
-      </a>
+      <p>Mountains • Snow</p>
+      <a class="btn" href="https://wa.me/919896067930?text=Manali%20Tour%20Enquiry">Enquiry on WhatsApp</a>
     </div>
 
     <div class="card">
       <img src="images/shimla.jpg">
       <h3>Shimla Tour</h3>
-      <p>Hill Station • Snow</p>
-      <a href="https://wa.me/919999010920?text=Shimla%20tour%20enquiry" target="_blank">
-        Enquiry on WhatsApp
-      </a>
+      <p>Hill Station</p>
+      <a class="btn" href="https://wa.me/919896067930?text=Shimla%20Tour%20Enquiry">Enquiry on WhatsApp</a>
     </div>
 
     <div class="card">
       <img src="images/haridwar.jpg">
       <h3>Haridwar Yatra</h3>
-      <p>Ganga • Spiritual</p>
-      <a href="https://wa.me/919999010920?text=Haridwar%20yatra%20enquiry" target="_blank">
-        Enquiry on WhatsApp
-      </a>
+      <p>Spiritual Tour</p>
+      <a class="btn" href="https://wa.me/919896067930?text=Haridwar%20Yatra%20Enquiry">Enquiry on WhatsApp</a>
     </div>
 
     <div class="card">
-      <img src="images/vaishnodevi.jpg">
+      <img src="images/vaishno.jpg">
       <h3>Vaishno Devi</h3>
-      <p>Religious • Yatra</p>
-      <a href="https://wa.me/919999010920?text=Vaishno%20Devi%20yatra%20enquiry" target="_blank">
-        Enquiry on WhatsApp
-      </a>
+      <p>Religious Yatra</p>
+      <a class="btn" href="https://wa.me/919896067930?text=Vaishno%20Devi%20Yatra%20Enquiry">Enquiry on WhatsApp</a>
     </div>
 
     <div class="card">
       <img src="images/rajasthan.jpg">
       <h3>Rajasthan Tour</h3>
-      <p>Culture • Desert</p>
-      <a href="https://wa.me/919999010920?text=Rajasthan%20tour%20enquiry" target="_blank">
-        Enquiry on WhatsApp
-      </a>
+      <p>Desert • Culture</p>
+      <a class="btn" href="https://wa.me/919896067930?text=Rajasthan%20Tour%20Enquiry">Enquiry on WhatsApp</a>
     </div>
 
   </div>
 </section>
 
+<!-- BOOKING -->
+<section>
+  <h2>Quick Booking</h2>
+  <form onsubmit="window.open('https://wa.me/919896067930?text=' + encodeURIComponent('Booking Enquiry\nName: '+name.value+'\nPackage: '+package.value+'\nMessage: '+message.value)); return false;">
+    <input name="name" placeholder="Your Name" required>
+    <select name="package">
+      <option>Manali</option>
+      <option>Shimla</option>
+      <option>Haridwar</option>
+      <option>Vaishno Devi</option>
+      <option>Rajasthan</option>
+    </select>
+    <textarea name="message" placeholder="Your Message"></textarea>
+    <button>Send on WhatsApp</button>
+  </form>
+</section>
+
+<!-- REVIEWS -->
+<section>
+  <h2>Customer Reviews</h2>
+  <div class="review">⭐⭐⭐⭐⭐ Excellent service & clean vehicles</div>
+  <div class="review">⭐⭐⭐⭐⭐ Very polite drivers & on-time service</div>
+  <div class="review">⭐⭐⭐⭐⭐ Best travel experience</div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact Us</h2>
-  <p><strong>📞 Phone:</strong> +91 99990 10920</p>
-  <p><strong>📍 Location:</strong> Haryana</p>
-
-  <a class="card a" href="https://wa.me/919999010920" target="_blank">WhatsApp Now</a>
+  <p><strong>📞 Phone:</strong> +91 98960 67930</p>
+  <p><strong>📍 Location:</strong> Gurugram & Jind, Haryana</p>
 </section>
 
 <footer>
@@ -222,8 +278,8 @@ footer{
 
 <!-- FLOAT BUTTONS -->
 <div class="float-btn">
-  <a href="https://wa.me/919999010920" target="_blank">💬</a>
-  <a href="tel:+919999010920" class="call">📞</a>
+  <a href="https://wa.me/919896067930">💬</a>
+  <a href="tel:+919896067930" class="call">📞</a>
 </div>
 
 </body>
